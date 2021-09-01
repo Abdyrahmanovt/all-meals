@@ -28,7 +28,7 @@ const Browse = () => {
             {
                 foods.map(el => (
                         <div key={el.idMeal} className='col-3'>
-                            <Link to={`/foodinfo/i=${el.idMeal}`}>
+                            <Link to={`/foodinfo/${el.idMeal}`}>
                                 <img src={el.strMealThumb} alt="" className='img'/>
                                 <div>
                                     {el.strMeal}

@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Header from "./Components/Header/Header";
-import MealsDetails from "./view/MealDetasils/MealDeatils";
+import MealsDetails from "./view/MealDetasils/MealDetails";
 import Meals from "./view/Meals/Meals";
 import Browse from "./view/Browse/Browse";
 import Ingredients from "./Components/Ingredients/Ingredients";
