@@ -7,6 +7,7 @@ import axios from "axios";
 const MealsDetails = () => {
     const params = useParams()
     const [infoFood, setInfoFood] = useState({})
+    const [youtube,setYoutube] = useState('')
 
     const ings = Array(20).fill(0).reduce((acc, item, idx) => {
         if (infoFood[`strIngredient${idx + 1}`]) {

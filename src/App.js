@@ -9,21 +9,24 @@ import Home from "./Components/Home/Home";
 
 const App = () => {
     return (
-        <div className='container'>
-            <Router>
+<div className='app-background'>
+    <div className='container'>
+        <Router>
 
-                <Header/>
+            <Header/>
 
-                <Route path='/home'><Home/></Route>
-                <Route path='/foods'><Meals/></Route>
-                <Route path='/foodinfo/:id'><MealsDetails/></Route>
+            <Route path='/home'><Home/></Route>
+            <Route path='/foods'><Meals/></Route>
+            <Route path='/foodinfo/:id'><MealsDetails/></Route>
 
-                <Route path='/browse/:search'><Browse/></Route>
-                <Route path='/ingredients/:name'><Ingredients/></Route>
+            <Route path='/browse/:search'><Browse/></Route>
+            <Route path='/ingredients/:name'><Ingredients/></Route>
 
 
-            </Router>
-        </div>
+        </Router>
+    </div>
+
+</div>
     )
 }
 

@@ -11,6 +11,7 @@ const Meals = () => {
         setSearch(e.target.value)
     }
 
+
     useEffect(() => {
         axios('https://www.themealdb.com/api/json/v2/1/randomselection.php')
             .then(({data}) => setfoods(data.meals))
@@ -21,8 +22,8 @@ const Meals = () => {
                 All foods
             </h1>
             <div className='search-food '>
-                <input onChange={handleSearch} type="text" className='input-search'/>
-                <Link to={`/browse/${search}`}><i className="fas fa-search btn-search"/></Link>
+                <input onChange={handleSearch}  type="text" className='input-search'/>
+                <Link to={`/browse/${search}`} ><i className="fas fa-search btn-search"/></Link>
             </div>
             <div className='row'>
                 {
