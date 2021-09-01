@@ -1,15 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
 import {Link} from "react-router-dom";
+import Search from "./Search";
 
 
 const Meals = () => {
     const [foods, setfoods] = useState([])
-    const [search, setSearch] = useState('')
-
-    const handleSearch = (e) => {
-        setSearch(e.target.value)
-    }
 
     useEffect(() => {
         axios('https://www.themealdb.com/api/json/v2/1/randomselection.php')
@@ -21,13 +17,12 @@ const Meals = () => {
                 All foods
             </h1>
             <div className='search-food '>
-                <input onChange={handleSearch} type="text" className='input-search'/>
-                <Link to={`/browse/${search}`}><i className="fas fa-search btn-search"/></Link>
+                <Search />
             </div>
             <div className='row '>
                 {
                     foods.map(el => (
-                            <div key={el.idMeal} className='col-4 meal-details'>
+                            <div key={el.idMeal} className='col-3 meal-details'>
                                 <Link to={`/foodinfo/${el.idMeal}`}>
                                     <img src={el.strMealThumb} alt="" className='img'/>
                                     <div className='img-title'>

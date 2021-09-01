@@ -8,7 +8,7 @@ const MealsDetails = () => {
         const [infoFood, setInfoFood] = useState({})
         const [youtube, setYoutube] = useState('')
 
-        const ings = Array(20).fill(0).reduce((acc, item, idx) => {
+            const ings = Array(20).fill(0).reduce((acc, item, idx) => {
             if (infoFood[`strIngredient${idx + 1}`]) {
                 return [...acc, infoFood[`strIngredient${idx + 1}`]]
             } else {
