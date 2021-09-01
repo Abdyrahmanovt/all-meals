@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom'
+import {Link,useParams} from 'react-router-dom'
 import axios from "axios";
+
 
 
 const MealsDetails = () => {
@@ -21,10 +22,11 @@ const MealsDetails = () => {
             .then(({data}) => setInfoFood(data.meals[0]))
     }, [params.id])
 
+
     return (
         <div className={'container'}>
             <div>
-                <h1>{infoFood.strMeal}</h1>
+                <h1 className='big-imgdesc'>{infoFood.strMeal}</h1>
             </div>
             <div className={'d-flex'}>
                 <img src={infoFood.strMealThumb} alt="" className='big-img'/>
@@ -32,9 +34,11 @@ const MealsDetails = () => {
                     {
                         ings.map(item => (
                             <div key={item} className="col-3 text-center">
-                                <img src={`https://www.themealdb.com/images/ingredients/${item}.png`} alt=""
-                                     width='100px'/>
-                                <p>{item}</p>
+                               <Link to={`/ingredients/${item}`}>
+                                   <img src={`https://www.themealdb.com/images/ingredients/${item}.png`} alt=""
+                                        width='100px'/>
+                                   <p>{item}</p>
+                               </Link>
                             </div>))
                     }
                 </div>
@@ -51,3 +55,4 @@ const MealsDetails = () => {
 };
 
 export default MealsDetails;
+
