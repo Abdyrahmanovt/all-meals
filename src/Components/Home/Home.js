@@ -14,10 +14,8 @@ const Home = () => {
                 </div>
             </div>
             <div className='col-6'>
-                <img src={hero} alt=""/>
+                <img src={hero} alt="" className='hero-img'/>
             </div>
-
-
         </div>
     );
 };
