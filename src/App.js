@@ -6,6 +6,7 @@ import Meals from "./view/Meals/Meals";
 import Browse from "./view/Browse/Browse";
 import Ingredients from "./Components/Ingredients/Ingredients";
 import Home from "./Components/Home/Home";
+import Contacts from "./Components/Contact Us/Contacts";
 
 const App = () => {
     return (
@@ -15,9 +16,10 @@ const App = () => {
 
             <Header/>
 
-            <Route exact path='/home'><Home/></Route>
+            <Route exact path='/'><Home/></Route>
             <Route path='/foods'><Meals/></Route>
             <Route path='/foodinfo/:id'><MealsDetails/></Route>
+            <Route path='/contacts'><Contacts /></Route>
 
             <Route path='/browse/:search'><Browse/></Route>
             <Route path='/ingredients/:name'><Ingredients/></Route>
